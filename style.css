@@ -298,6 +298,9 @@ html {
   display: block;
 }
 
+#aboutSec {
+  max-height: 900px;
+}
 
 /* Treatment Card */
 /* --------------------- */
