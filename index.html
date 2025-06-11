@@ -219,7 +219,7 @@
             <form class="contact-form">
                 <input id="fName" type="text" placeholder="First Name" required />
                 <input id="lName" type="text" placeholder="Last Name" required />
-                <input id="email" type="email" placeholder="Your Email" required />
+                <input id="email-input" type="email" placeholder="Your Email" required />
                 <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
                 <p id="signup-error" style="color: red; display: none">
                     Please fill in all fields.
@@ -266,7 +266,7 @@
             .addEventListener("click", async () => {
                 const firstName = document.getElementById("fName").value.trim();
                 const lastName = document.getElementById("lName").value.trim();
-                const email = document.getElementById("email").value.trim();
+                const email = document.getElementById("email-input").value.trim();
                 const message = document
                     .getElementById("message")
                     .value.trim();
