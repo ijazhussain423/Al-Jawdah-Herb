@@ -302,62 +302,138 @@ html {
 /* Treatment Card */
 /* --------------------- */
 
+.horizontal-treatment-section {
+  padding: 80px 20px 60px;
+  background: linear-gradient(to bottom, #f5fbe8, #e0edd4);
+}
+
+.horizontal-treatment-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
 .treatment-card {
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 64, 0, 0.1);
-  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 64, 0, 0.1);
+  padding: 20px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  padding-bottom: 20px;
+  flex: 1 1 280px;
+  max-width: 300px;
 }
 
 .treatment-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 64, 0, 0.2);
-}
-
-.treatment-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.treatment-card:hover img {
-  transform: scale(1.05);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 64, 0, 0.2);
 }
 
 .treatment-card h3 {
-  margin: 15px 0 10px;
-  color: #3a4d3a;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  color: #2e472e;
+  margin-bottom: 10px;
 }
 
 .treatment-card p {
-  padding: 0 20px 20px;
   font-size: 0.95rem;
   color: #5e5e4d;
-  line-height: 1.4;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
-/* Button */
 .btn {
   display: inline-block;
-  /* margin-bottom: 20px; */
   padding: 10px 20px;
   background-color: #7cb342;
   color: white;
   text-decoration: none;
   border-radius: 6px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
   font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
   background-color: #558b2f;
   transform: scale(1.05);
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .horizontal-treatment-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .treatment-card {
+    max-width: 100%;
+  }
+}
+
+/* Details Page Styles */
+.treatment-details {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f5fbe8, #e0edd4);
+  min-height: 100vh;
+  display: none;
+}
+
+.details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 64, 0, 0.15);
+}
+
+.back-btn {
+  background-color: #666;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background-color: #555;
+}
+
+.details-title {
+  font-size: 2.2rem;
+  color: #2e472e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.details-description {
+  font-size: 1.1rem;
+  color: #5e5e4d;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.treatment-info {
+  background: #f8fff2;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #7cb342;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-title {
+  font-size: 1.2rem;
+  color: #2e472e;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.info-text {
+  color: #5e5e4d;
+  line-height: 1.6;
 }
 
 /* Product */
